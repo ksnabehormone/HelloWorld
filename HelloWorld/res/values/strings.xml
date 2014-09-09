@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HelloWorld</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Buttonのタイトル -->
+    <string name="button_title">Show Alert!</string>
+    
+    <!-- linkリスト -->
+    <string name="link_fragment">Fragment</string>
+    <string name="link_item_list">ItemList</string>
+    <string name="link_framelayout">FrameLayut重ねて表示</string>
+    <string name="link_list_height_change">リストの高さを個別に変えれるか</string>
+    <string name="link_line_break">横に並べて改行</string>
+    <string name="link_async">非同期</string>
+    
+    <!-- アイテムの情報 -->
+    <string name="shopName">川端食堂</string>
+    <string name="itemName">お高いお肉</string>
+    <string name="price">50,000円</string>
+    <string name="sentence">ちょっとお高いですが、おいしいお肉です。</string>
+
+</resources>

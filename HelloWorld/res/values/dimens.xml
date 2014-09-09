@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- フォントサイズ -->
+    <dimen name="font_size">16sp</dimen>
+    <dimen name="font_size_large">24sp</dimen>
+    
+    <!-- 画像を重ねる際のmargin -->
+    <dimen name="margin_top">50px</dimen>
+    <dimen name="margin_top_img">30px</dimen>
+
+</resources>
