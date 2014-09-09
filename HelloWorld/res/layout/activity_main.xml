@@ -14,73 +14,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_world" />
-    
-    <Button 
-        android:id="@+id/link_fragment"
+
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_fragment"
-        />
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/layout_main_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >    
+            
+        </LinearLayout>
+    </ScrollView>
     
-    <Button 
-        android:id="@+id/link_item_list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_item_list"
-        />
     
-    <Button 
-        android:id="@+id/link_framelayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_framelayout"
-        />
-    
-    <Button 
-        android:id="@+id/link_list_height_change"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_list_height_change"
-        />
-    
-    <Button 
-        android:id="@+id/link_line_break"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_line_break"
-        />
-    
-    <Button 
-        android:id="@+id/link_async"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/link_async"
-        />
-    
-    <Button 
-        android:id="@+id/link_layout_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="レイアウトテスト"
-        />
-    
-    <Button 
-        android:id="@+id/link_switch_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="スイッチボタン"
-        />
-    
-    <Button 
-        android:id="@+id/link_mylistener"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="独自リスナー" />
-    
-    <Button 
-        android:id="@+id/link_dialog_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="DialogFragment" />
 
 </LinearLayout>

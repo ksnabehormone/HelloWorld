@@ -1098,13 +1098,13 @@ containing a value of this type.
         public static final int selecter=0x7f02005b;
     }
     public static final class id {
-        public static final int Button1=0x7f05005b;
-        public static final int Button2=0x7f05005c;
-        public static final int ItemListLayout=0x7f050059;
+        public static final int Button1=0x7f050053;
+        public static final int Button2=0x7f050054;
+        public static final int ItemListLayout=0x7f050051;
         public static final int LinearLayout1=0x7f05004c;
         public static final int RelativeLayout1=0x7f05003f;
-        public static final int TabWidget=0x7f05005d;
-        public static final int TextTab=0x7f05005e;
+        public static final int TabWidget=0x7f050055;
+        public static final int TextTab=0x7f050056;
         public static final int action_bar=0x7f05001c;
         public static final int action_bar_activity_content=0x7f050015;
         public static final int action_bar_container=0x7f05001b;
@@ -1116,13 +1116,13 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
         public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050066;
+        public static final int action_settings=0x7f05005e;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int button_alert=0x7f05005a;
+        public static final int button_alert=0x7f050052;
         public static final int button_show_dialog=0x7f05003c;
-        public static final int change_target=0x7f05005f;
+        public static final int change_target=0x7f050057;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
         public static final int default_activity_button=0x7f050028;
@@ -1134,7 +1134,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int fragment1=0x7f05003e;
-        public static final int fragment2=0x7f050057;
+        public static final int fragment2=0x7f05004f;
         public static final int height_change_target=0x7f05004b;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
@@ -1142,23 +1142,14 @@ containing a value of this type.
         public static final int ifRoom=0x7f05000a;
         public static final int image=0x7f050027;
         public static final int imageView1=0x7f050045;
-        public static final int imageView_item=0x7f050062;
+        public static final int imageView_item=0x7f05005a;
         public static final int img_atension=0x7f050042;
-        public static final int item_content=0x7f050060;
+        public static final int item_content=0x7f050058;
         public static final int label_list=0x7f050047;
+        public static final int layout_main_list=0x7f05004e;
         public static final int linear1=0x7f050043;
         public static final int lineout=0x7f050048;
         public static final int lineout2=0x7f050049;
-        public static final int link_async=0x7f050052;
-        public static final int link_dialog_fragment=0x7f050056;
-        public static final int link_fragment=0x7f05004d;
-        public static final int link_framelayout=0x7f05004f;
-        public static final int link_item_list=0x7f05004e;
-        public static final int link_layout_test=0x7f050053;
-        public static final int link_line_break=0x7f050051;
-        public static final int link_list_height_change=0x7f050050;
-        public static final int link_mylistener=0x7f050055;
-        public static final int link_switch_button=0x7f050054;
         public static final int listMode=0x7f050001;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
@@ -1171,6 +1162,7 @@ containing a value of this type.
         public static final int relativeLayout2=0x7f050040;
         public static final int rl=0x7f050044;
         public static final int sample_fragment=0x7f05003d;
+        public static final int scrollView1=0x7f05004d;
         public static final int search_badge=0x7f050032;
         public static final int search_bar=0x7f050031;
         public static final int search_button=0x7f050033;
@@ -1189,12 +1181,12 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int test=0x7f05004a;
-        public static final int textView1=0x7f050058;
+        public static final int textView1=0x7f050050;
         public static final int textView_framelayout=0x7f050041;
-        public static final int textView_itemName=0x7f050063;
-        public static final int textView_price=0x7f050064;
-        public static final int textView_sentence=0x7f050065;
-        public static final int textView_shopName=0x7f050061;
+        public static final int textView_itemName=0x7f05005b;
+        public static final int textView_price=0x7f05005c;
+        public static final int textView_sentence=0x7f05005d;
+        public static final int textView_shopName=0x7f050059;
         public static final int title=0x7f05002b;
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
@@ -1270,7 +1262,8 @@ containing a value of this type.
         public static final int layout_height_change_contents=0x7f030027;
         public static final int layout_item_contents=0x7f030028;
         public static final int layout_label=0x7f030029;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002a;
+        public static final int layout_test_dialog=0x7f03002a;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002b;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

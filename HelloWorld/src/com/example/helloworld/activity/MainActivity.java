@@ -8,21 +8,30 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.helloworld.R;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity {
 
-	final private int ids[] = { R.id.link_fragment, R.id.link_item_list, R.id.link_framelayout,
-			R.id.link_list_height_change, R.id.link_line_break, R.id.link_async,
-			R.id.link_layout_test, R.id.link_switch_button, R.id.link_mylistener,
-			R.id.link_dialog_fragment };
+	private LinearLayout list;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		setClickable();
+
+		list = (LinearLayout) findViewById(R.id.layout_main_list);
+		addButton("Fragment基礎", KsFragmentActivity.class);
+		addButton("アイテムリスト", ItemListActivity.class);
+		addButton("FrameLayout重ねて表示", FrameLayoutActivity.class);
+		addButton("リストの高さを個別に変えれるか", ListHeightChangeActivity.class);
+		addButton("横に並べて改行", LineBreakActivity.class);
+		addButton("非同期", AsyncActivity.class);
+		addButton("レイアウトテスト", LayouotTestActivity.class);
+		addButton("スイッチボタン", SelectSwitchButtonActivity.class);
+		addButton("独自リスナー", MyListenerActivity.class);
+		addButton("DialogFragment", DialogFragmentActivity.class);
 	}
 
 	@Override
@@ -44,42 +53,6 @@ public class MainActivity extends Activity implements OnClickListener {
 		return super.onOptionsItemSelected(item);
 	}
 
-	@Override
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.link_fragment:
-			forward(KsFragmentActivity.class);
-			break;
-		case R.id.link_item_list:
-			forward(ItemListActivity.class);
-			break;
-		case R.id.link_framelayout:
-			forward(FrameLayoutActivity.class);
-			break;
-		case R.id.link_list_height_change:
-			forward(ListHeightChangeActivity.class);
-			break;
-		case R.id.link_line_break:
-			forward(LineBreakActivity.class);
-			break;
-		case R.id.link_async:
-			forward(AsyncActivity.class);
-			break;
-		case R.id.link_layout_test:
-			forward(LayouotTestActivity.class);
-			break;
-		case R.id.link_switch_button:
-			forward(SelectSwitchButtonActivity.class);
-			break;
-		case R.id.link_mylistener:
-			forward(MyListenerActivity.class);
-			break;
-		case R.id.link_dialog_fragment:
-			forward(DialogFragmentActivity.class);
-			break;
-		}
-	}
-
 	/**
 	 * 画面遷移 ※manifest忘れずに
 	 * 
@@ -90,11 +63,19 @@ public class MainActivity extends Activity implements OnClickListener {
 		startActivity(intent);
 	}
 
-	private void setClickable() {
-		for (int id : ids) {
-			Button button = (Button) findViewById(id);
-			button.setOnClickListener(this);
-		}
+	private void addButton(String title, final Class<?> forwardTo) {
+		Button view = new Button(this);
+		view.setText(title);
+		view.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+				LinearLayout.LayoutParams.WRAP_CONTENT));
+		view.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				forward(forwardTo);
+			}
+		});
+		list.addView(view);
 	}
 
 }
