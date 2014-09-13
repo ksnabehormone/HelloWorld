@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
 		addButton("スイッチボタン", SelectSwitchButtonActivity.class);
 		addButton("独自リスナー", MyListenerActivity.class);
 		addButton("DialogFragment", DialogFragmentActivity.class);
+		addButton("Volleyのサンプル", VolleySampleActivity.class);
 	}
 
 	@Override

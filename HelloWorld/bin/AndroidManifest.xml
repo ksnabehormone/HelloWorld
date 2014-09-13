@@ -7,6 +7,10 @@
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
+    <uses-permission 
+        android:name="android.permission.INTERNET">
+        
+    </uses-permission>
 
     <application
         android:allowBackup="true"
@@ -33,6 +37,7 @@
         <activity android:name=".activity.SelectSwitchButtonActivity"></activity>
         <activity android:name=".activity.MyListenerActivity"></activity>
         <activity android:name=".activity.DialogFragmentActivity"></activity>
+        <activity android:name=".activity.VolleySampleActivity"></activity>
     </application>
 
 </manifest>
