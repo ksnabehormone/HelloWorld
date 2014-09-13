@@ -34,6 +34,7 @@ public class MainActivity extends Activity {
 		addButton("DialogFragment", DialogFragmentActivity.class);
 		addButton("Volleyのサンプル", VolleySampleActivity.class);
 		addButton("画像取得サンプル", GetPhotoActivity.class);
+		addButton("取得した画像を表示", ShowGalleryActivity.class);
 	}
 
 	@Override
