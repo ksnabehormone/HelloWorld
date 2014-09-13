@@ -38,6 +38,7 @@
         <activity android:name=".activity.MyListenerActivity"></activity>
         <activity android:name=".activity.DialogFragmentActivity"></activity>
         <activity android:name=".activity.VolleySampleActivity"></activity>
+        <activity android:name=".activity.GetPhotoActivity"></activity>
     </application>
 
 </manifest>

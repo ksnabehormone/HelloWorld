@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 		addButton("独自リスナー", MyListenerActivity.class);
 		addButton("DialogFragment", DialogFragmentActivity.class);
 		addButton("Volleyのサンプル", VolleySampleActivity.class);
+		addButton("画像取得サンプル", GetPhotoActivity.class);
 	}
 
 	@Override

@@ -1254,18 +1254,19 @@ containing a value of this type.
         public static final int activity_line_break=0x7f03001e;
         public static final int activity_list_height_change=0x7f03001f;
         public static final int activity_main=0x7f030020;
-        public static final int activity_select_switch=0x7f030021;
-        public static final int activity_volley_sample=0x7f030022;
-        public static final int fragment_item_list=0x7f030023;
-        public static final int fragment_sample=0x7f030024;
-        public static final int fragment_switch_button=0x7f030025;
-        public static final int fragment_switch_tab=0x7f030026;
-        public static final int fragment_text=0x7f030027;
-        public static final int layout_height_change_contents=0x7f030028;
-        public static final int layout_item_contents=0x7f030029;
-        public static final int layout_label=0x7f03002a;
-        public static final int layout_test_dialog=0x7f03002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03002c;
+        public static final int activity_photo_get=0x7f030021;
+        public static final int activity_select_switch=0x7f030022;
+        public static final int activity_volley_sample=0x7f030023;
+        public static final int fragment_item_list=0x7f030024;
+        public static final int fragment_sample=0x7f030025;
+        public static final int fragment_switch_button=0x7f030026;
+        public static final int fragment_switch_tab=0x7f030027;
+        public static final int fragment_text=0x7f030028;
+        public static final int layout_height_change_contents=0x7f030029;
+        public static final int layout_item_contents=0x7f03002a;
+        public static final int layout_label=0x7f03002b;
+        public static final int layout_test_dialog=0x7f03002c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03002d;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
