@@ -35,6 +35,8 @@ public class MainActivity extends Activity {
 		addButton("Volleyのサンプル", VolleySampleActivity.class);
 		addButton("画像取得サンプル", GetPhotoActivity.class);
 		addButton("取得した画像を表示", ShowGalleryActivity.class);
+		addButton("File操作", FileManageActivity.class);
+		addButton("サムネイル一覧", ShowThumbNailsActivity.class);
 	}
 
 	@Override

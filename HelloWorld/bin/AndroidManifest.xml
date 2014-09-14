@@ -40,6 +40,8 @@
         <activity android:name=".activity.VolleySampleActivity"></activity>
         <activity android:name=".activity.GetPhotoActivity"></activity>
         <activity android:name=".activity.ShowGalleryActivity"></activity>
+        <activity android:name=".activity.FileManageActivity"></activity>
+        <activity android:name=".activity.ShowThumbNailsActivity"></activity>
     </application>
 
 </manifest>
