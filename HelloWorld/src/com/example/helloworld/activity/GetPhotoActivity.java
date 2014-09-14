@@ -59,7 +59,7 @@ public class GetPhotoActivity extends Activity implements OnClickListener {
 				data.getData();
 				mBmp = BitmapFactory.decodeStream(is);
 				mImage.setImageBitmap(mBmp);
-				// savePhoto(mBmp);
+				savePhoto(mBmp);
 				is.close();
 			} catch (NullPointerException e) {
 				e.printStackTrace();

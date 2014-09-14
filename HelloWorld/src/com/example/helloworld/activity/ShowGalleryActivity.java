@@ -36,6 +36,12 @@ public class ShowGalleryActivity extends Activity implements OnItemClickListener
 		items.add(loadPhoto());
 		items.add(loadPhoto());
 		items.add(loadPhoto());
+		items.add(loadPhoto());
+		items.add(loadPhoto());
+		items.add(loadPhoto());
+		items.add(loadPhoto());
+		items.add(loadPhoto());
+		items.add(loadPhoto());
 		PhotoAdapter adapter = new PhotoAdapter(this, items);
 		list.setAdapter(adapter);
 

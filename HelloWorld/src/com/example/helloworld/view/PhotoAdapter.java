@@ -8,29 +8,40 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 
 import com.example.helloworld.R;
 
 public class PhotoAdapter extends BaseAdapter {
 
+	private Context context;
 	// レイアウトを差し込むためにInflaterは必須
 	private LayoutInflater inflater;
 	// 1アイテム当たりの情報を詰め込むための情報
 	private ArrayList<Bitmap> items;
 
 	public PhotoAdapter(Context context, ArrayList<Bitmap> items) {
+		this.context = context;
 		this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.items = items;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		View view = inflater.inflate(R.layout.adapter_photo, null);
-		view.setFocusable(false);
-		ImageView image = (ImageView) view.findViewById(R.id.image_photo);
-		image.setImageBitmap(items.get(position));
-		return view;
+		if (convertView == null) {
+
+			LayoutInflater inflater = LayoutInflater.from(context);
+
+			convertView = inflater.inflate(R.layout.adapter_photo, null);
+
+			convertView.setFocusable(false);
+
+			SquareImageView image = (SquareImageView) convertView.findViewById(R.id.image_photo);
+
+			image.setImageBitmap(items.get(position));
+
+		}
+
+		return convertView;
 	}
 
 	@Override

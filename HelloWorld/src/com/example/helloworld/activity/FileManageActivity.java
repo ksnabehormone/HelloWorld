@@ -25,7 +25,7 @@ public class FileManageActivity extends Activity {
 		lv = (ListView) findViewById(R.id.list_file);
 
 		String sdPath = Environment.getExternalStorageDirectory().getPath();
-		files = new File(sdPath).listFiles();
+		String path2 = getFilesDir().getPath();
 		files = getFilesDir().listFiles();
 		if (files != null) {
 			for (int i = 0; i < files.length; i++) {
