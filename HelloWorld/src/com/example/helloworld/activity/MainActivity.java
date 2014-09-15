@@ -28,6 +28,7 @@ public class MainActivity extends Activity {
 		addButton("リストの高さを個別に変えれるか", ListHeightChangeActivity.class);
 		addButton("横に並べて改行", LineBreakActivity.class);
 		addButton("非同期", AsyncActivity.class);
+		addButton("Handler処理", HandlerActivity.class);
 		addButton("レイアウトテスト", LayouotTestActivity.class);
 		addButton("スイッチボタン", SelectSwitchButtonActivity.class);
 		addButton("独自リスナー", MyListenerActivity.class);

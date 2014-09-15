@@ -15,6 +15,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.example.helloworld.R;
+import com.example.helloworld.async.DownloadAdapterAsyncTask;
 import com.example.helloworld.view.PhotoAdapter;
 
 public class ShowGalleryActivity extends Activity implements OnItemClickListener {
@@ -29,6 +30,16 @@ public class ShowGalleryActivity extends Activity implements OnItemClickListener
 		list = (GridView) findViewById(R.id.list_photo);
 		list.setOnItemClickListener(this);
 
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+
+	}
+
+	private void load01() {
+		// 一気に読み込むダメなパターン
 		ArrayList<Bitmap> items = new ArrayList<Bitmap>();
 		items.add(loadPhoto());
 		items.add(loadPhoto());
@@ -44,7 +55,12 @@ public class ShowGalleryActivity extends Activity implements OnItemClickListener
 		items.add(loadPhoto());
 		PhotoAdapter adapter = new PhotoAdapter(this, items);
 		list.setAdapter(adapter);
+	}
 
+	private void load02() {
+		// バックグラウンドで読み込ませるこれもダメなパターン
+		DownloadAdapterAsyncTask task = new DownloadAdapterAsyncTask(this, list);
+		task.execute((Void) null);
 	}
 
 	private Bitmap loadPhoto() {

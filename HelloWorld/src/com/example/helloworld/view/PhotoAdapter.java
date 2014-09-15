@@ -1,6 +1,6 @@
 package com.example.helloworld.view;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -17,9 +17,9 @@ public class PhotoAdapter extends BaseAdapter {
 	// レイアウトを差し込むためにInflaterは必須
 	private LayoutInflater inflater;
 	// 1アイテム当たりの情報を詰め込むための情報
-	private ArrayList<Bitmap> items;
+	private List<Bitmap> items;
 
-	public PhotoAdapter(Context context, ArrayList<Bitmap> items) {
+	public PhotoAdapter(Context context, List<Bitmap> items) {
 		this.context = context;
 		this.inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		this.items = items;
