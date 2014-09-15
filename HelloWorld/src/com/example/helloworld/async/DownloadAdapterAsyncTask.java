@@ -1,5 +1,6 @@
 package com.example.helloworld.async;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -11,9 +12,10 @@ import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.widget.AbsListView;
 
+import com.example.helloworld.model.PhotoInfo;
 import com.example.helloworld.view.PhotoAdapter;
 
-public class DownloadAdapterAsyncTask extends AsyncTask<Void, Void, List<Bitmap>> {
+public class DownloadAdapterAsyncTask extends AsyncTask<Void, Void, List<PhotoInfo>> {
 
 	private Context mContext;
 
@@ -31,25 +33,50 @@ public class DownloadAdapterAsyncTask extends AsyncTask<Void, Void, List<Bitmap>
 	}
 
 	@Override
-	protected List<Bitmap> doInBackground(Void... params) {
-		List<Bitmap> bmpList = new ArrayList<Bitmap>();
-		for (int i = 0; i < 10; i++) {
-			bmpList.add(loadPhoto());
+	protected List<PhotoInfo> doInBackground(Void... params) {
+		List<PhotoInfo> photos = new ArrayList<PhotoInfo>();
+		for (String url : findUrls()) {
+			PhotoInfo photo = new PhotoInfo();
+			photo.url = url;
+			photo.bitmap = loadBitmap(url);
+			photos.add(photo);
 		}
-		return bmpList;
+		return photos;
 	}
 
 	@Override
-	protected void onPostExecute(List<Bitmap> result) {
+	protected void onPostExecute(List<PhotoInfo> result) {
 		super.onPostExecute(result);
 		PhotoAdapter adapter = new PhotoAdapter(mContext, result);
 		listView.setAdapter(adapter);
 	}
 
-	private Bitmap loadPhoto() {
+	/**
+	 * /data/data/パッケージ/ファイルURL一覧を取得する
+	 * 
+	 * @return
+	 */
+	private ArrayList<String> findUrls() {
+		ArrayList<String> urls = new ArrayList<String>();
+		File[] files = mContext.getFilesDir().listFiles();
+		if (files != null) {
+			for (File file : files) {
+				urls.add(file.getName());
+			}
+		}
+		return urls;
+	}
+
+	/**
+	 * URLからBitmapをダウンロードする
+	 * 
+	 * @param url
+	 * @return
+	 */
+	private Bitmap loadBitmap(String url) {
 		InputStream input = null;
 		try {
-			input = mContext.openFileInput("image.png");
+			input = mContext.openFileInput(url);
 		} catch (FileNotFoundException e) {
 			// エラー処理
 		}

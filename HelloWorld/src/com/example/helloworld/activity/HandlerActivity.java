@@ -28,6 +28,7 @@ public class HandlerActivity extends Activity implements OnClickListener, Runnab
 		button.setOnClickListener(this);
 
 		mHandler = new Handler() {
+			// メッセージを受け取る
 			@Override
 			public void handleMessage(Message msg) {
 				text.setText((String) msg.obj);
@@ -69,6 +70,8 @@ public class HandlerActivity extends Activity implements OnClickListener, Runnab
 				// Message msg = new Message(); //非推奨
 				Message msg = Message.obtain(); // 推奨
 				// Message msg = mHandler.obtainMessage(); //推奨
+
+				// ここのmsg.objに詰めるのがポイント
 				msg.obj = new String("ループが" + count + "回終了しました");
 
 				// ハンドラへのメッセージ送信

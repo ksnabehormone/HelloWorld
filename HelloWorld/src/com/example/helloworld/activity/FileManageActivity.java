@@ -40,6 +40,11 @@ public class FileManageActivity extends Activity {
 
 	}
 
+	/**
+	 * /data/data/パッケージ/ファイル名一覧を取得する
+	 * 
+	 * @return
+	 */
 	private ArrayList<String> findFiles() {
 		ArrayList<String> texts = new ArrayList<String>();
 		File[] files = getFilesDir().listFiles();

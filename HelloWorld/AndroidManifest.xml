@@ -43,6 +43,7 @@
         <activity android:name=".activity.FileManageActivity"></activity>
         <activity android:name=".activity.ShowThumbNailsActivity"></activity>
         <activity android:name=".activity.HandlerActivity"></activity>
+        <activity android:name=".activity.PhotoZoomActivity" android:theme="@style/Theme.HarfTrans"></activity>
     </application>
 
 </manifest>

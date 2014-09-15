@@ -56,7 +56,6 @@ public class GetPhotoActivity extends Activity implements OnClickListener {
 		if (resultCode == RESULT_OK) {
 			try {
 				InputStream is = getContentResolver().openInputStream(data.getData());
-				data.getData();
 				mBmp = BitmapFactory.decodeStream(is);
 				mImage.setImageBitmap(mBmp);
 				savePhoto(mBmp);
@@ -74,8 +73,9 @@ public class GetPhotoActivity extends Activity implements OnClickListener {
 	private void savePhoto(Bitmap image) {
 		FileOutputStream out = null;
 		try {
-			// openFileOutputはContextのメソッドなのでActivity内ならばthisでOK
-			out = this.openFileOutput("image.png", Context.MODE_PRIVATE);
+			// ファイル名を現在時刻に設定して保存する
+			String fileName = String.valueOf(System.currentTimeMillis()) + ".png";
+			out = this.openFileOutput(fileName, Context.MODE_PRIVATE);
 			image.compress(Bitmap.CompressFormat.PNG, 100, out);
 		} catch (FileNotFoundException e) {
 			// エラー処理
