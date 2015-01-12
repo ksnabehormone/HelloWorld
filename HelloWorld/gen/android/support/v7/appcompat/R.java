@@ -136,15 +136,20 @@ public final class R {
 		public static final int abc_split_action_bar_is_narrow = 0x7f060002;
 	}
 	public static final class color {
-		public static final int abc_search_url_text_holo = 0x7f070009;
+		public static final int abc_search_url_text_holo = 0x7f07000e;
 		public static final int abc_search_url_text_normal = 0x7f070000;
 		public static final int abc_search_url_text_pressed = 0x7f070002;
 		public static final int abc_search_url_text_selected = 0x7f070001;
 		public static final int blue = 0x7f070004;
+		public static final int emerald_green = 0x7f07000a;
 		public static final int gray = 0x7f070003;
 		public static final int green = 0x7f070005;
+		public static final int line_edittext_frame = 0x7f07000d;
+		public static final int line_form_bg = 0x7f07000c;
+		public static final int main_bg = 0x7f07000b;
 		public static final int orange = 0x7f070008;
 		public static final int purple = 0x7f070006;
+		public static final int white = 0x7f070009;
 		public static final int yellow = 0x7f070007;
 	}
 	public static final class dimen {
@@ -349,7 +354,7 @@ public final class R {
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030015;
 		public static final int abc_search_view = 0x7f030016;
 		public static final int abc_simple_decor = 0x7f030017;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030033;
+		public static final int support_simple_spinner_dropdown_item = 0x7f030035;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f0a0001;
